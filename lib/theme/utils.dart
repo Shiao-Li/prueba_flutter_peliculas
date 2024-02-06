@@ -9,22 +9,22 @@ ThemeData _buildLightTheme() {
     canvasColor: Colors.transparent,
     primaryIconTheme: IconThemeData(color: Colors.black),
     textTheme: TextTheme(
-      headline5: TextStyle(
+      headlineSmall: TextStyle(
           fontFamily: 'Sans',
           fontWeight: FontWeight.bold,
           color: Colors.black,
           fontSize: 24),
-      bodyText2: TextStyle(
+      bodyMedium: TextStyle(
           fontFamily: 'Sans',
           fontWeight: FontWeight.bold,
           color: Colors.black,
           fontSize: 18),
-      bodyText1: TextStyle(
+      bodyLarge: TextStyle(
           fontFamily: 'Sans',
           fontWeight: FontWeight.bold,
           color: Colors.black,
           fontSize: 16),
-      caption: TextStyle(
+      bodySmall: TextStyle(
           fontFamily: 'Sans',
           fontWeight: FontWeight.normal,
           color: Colors.black,
@@ -42,22 +42,22 @@ ThemeData _buildDarkTheme() {
     canvasColor: Colors.transparent,
     primaryIconTheme: IconThemeData(color: Colors.black),
     textTheme: TextTheme(
-      headline5: TextStyle(
+      headlineSmall: TextStyle(
           fontFamily: 'Sans',
           fontWeight: FontWeight.bold,
           color: Colors.white,
           fontSize: 24),
-      bodyText2: TextStyle(
+      bodyMedium: TextStyle(
           fontFamily: 'Sans',
           fontWeight: FontWeight.bold,
           color: Colors.white,
           fontSize: 18),
-      bodyText1: TextStyle(
+      bodyLarge: TextStyle(
           fontFamily: 'Sans',
           fontWeight: FontWeight.bold,
           color: Colors.white,
           fontSize: 16),
-      caption: TextStyle(
+      bodySmall: TextStyle(
           fontFamily: 'Sans',
           fontWeight: FontWeight.normal,
           color: Colors.white,
@@ -76,22 +76,22 @@ ThemeData _buildAmoledTheme() {
     canvasColor: Colors.transparent,
     primaryIconTheme: IconThemeData(color: Colors.black),
     textTheme: TextTheme(
-      headline5: TextStyle(
+      headlineSmall: TextStyle(
           fontFamily: 'Sans',
           fontWeight: FontWeight.bold,
           color: Colors.white,
           fontSize: 24),
-      bodyText2: TextStyle(
+      bodyMedium: TextStyle(
           fontFamily: 'Sans',
           fontWeight: FontWeight.bold,
           color: Colors.white,
           fontSize: 18),
-      bodyText1: TextStyle(
+      bodyLarge: TextStyle(
           fontFamily: 'Sans',
           fontWeight: FontWeight.bold,
           color: Colors.white,
           fontSize: 16),
-      caption: TextStyle(
+      bodySmall: TextStyle(
           fontFamily: 'Sans',
           fontWeight: FontWeight.normal,
           color: Colors.white,

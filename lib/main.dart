@@ -63,7 +63,7 @@ class _MyHomePageState extends State<MyHomePage> {
         centerTitle: true,
         title: Text(
           'Matinee',
-          style: state.themeData.textTheme.headline5,
+          style: state.themeData.textTheme.headlineSmall,
         ),
         backgroundColor: state.themeData.primaryColor,
         actions: <Widget>[

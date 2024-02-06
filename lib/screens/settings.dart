@@ -61,7 +61,7 @@ class _SettingsPageState extends State<SettingsPage> {
                           },
                           child: Text(
                             'Log In / Sign Up',
-                            style: state.themeData.textTheme.bodyText1,
+                            style: state.themeData.textTheme.bodyLarge,
                           ),
                         ),
                       ],
@@ -75,7 +75,7 @@ class _SettingsPageState extends State<SettingsPage> {
                   children: <Widget>[
                     Text(
                       'Theme',
-                      style: state.themeData.textTheme.bodyText1,
+                      style: state.themeData.textTheme.bodyLarge,
                     ),
                   ],
                 ),
@@ -105,7 +105,7 @@ class _SettingsPageState extends State<SettingsPage> {
                                   ),
                                 ),
                                 Text(themes[index],
-                                    style: state.themeData.textTheme.bodyText1)
+                                    style: state.themeData.textTheme.bodyLarge)
                               ],
                             ),
                             Column(
@@ -146,7 +146,7 @@ class _SettingsPageState extends State<SettingsPage> {
                                   ),
                                 ),
                                 Text(themes[index],
-                                    style: state.themeData.textTheme.bodyText1)
+                                    style: state.themeData.textTheme.bodyLarge)
                               ],
                             ),
                           ],

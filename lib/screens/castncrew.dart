@@ -23,20 +23,20 @@ class CastAndCrew extends StatelessWidget {
               Tab(
                 child: Text(
                   'Cast',
-                  style: themeData!.textTheme.bodyText1,
+                  style: themeData!.textTheme.bodyLarge,
                 ),
               ),
               Tab(
                 child: Text(
                   'Crew',
-                  style: themeData!.textTheme.bodyText1,
+                  style: themeData!.textTheme.bodyLarge,
                 ),
               ),
             ],
           ),
           title: Text(
             'Cast And Crew',
-            style: themeData!.textTheme.headline5,
+            style: themeData!.textTheme.headlineSmall,
           ),
           leading: IconButton(
             icon: Icon(
@@ -97,12 +97,12 @@ class CastAndCrew extends StatelessWidget {
                       children: <Widget>[
                         Text(
                           'Name : ' + credits!.cast![index].name!,
-                          style: themeData!.textTheme.bodyText2,
+                          style: themeData!.textTheme.bodyMedium,
                           overflow: TextOverflow.ellipsis,
                         ),
                         Text(
                           'Character : ' + credits!.cast![index].character!,
-                          style: themeData!.textTheme.bodyText1,
+                          style: themeData!.textTheme.bodyLarge,
                         ),
                       ],
                     ),
@@ -158,12 +158,12 @@ class CastAndCrew extends StatelessWidget {
                       children: <Widget>[
                         Text(
                           'Name : ' + credits!.crew![index].name!,
-                          style: themeData!.textTheme.bodyText2,
+                          style: themeData!.textTheme.bodyMedium,
                           overflow: TextOverflow.ellipsis,
                         ),
                         Text(
                           'Job : ' + credits!.crew![index].job!,
-                          style: themeData!.textTheme.bodyText1,
+                          style: themeData!.textTheme.bodyLarge,
                         ),
                       ],
                     ),

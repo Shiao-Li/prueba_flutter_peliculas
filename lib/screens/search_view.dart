@@ -14,7 +14,7 @@ class MovieSearch extends SearchDelegate<Movie?> {
         hintColor: themeData!.colorScheme.secondary,
         primaryColor: themeData!.primaryColor,
         textTheme: TextTheme(
-          headline6: themeData!.textTheme.bodyText1,
+          titleLarge: themeData!.textTheme.bodyLarge,
         ));
 
     return theme;
@@ -79,7 +79,7 @@ class MovieSearch extends SearchDelegate<Movie?> {
             ),
           ),
           Text('Enter a Movie to search.',
-              style: themeData!.textTheme.bodyText1)
+              style: themeData!.textTheme.bodyLarge)
         ],
       )),
     );

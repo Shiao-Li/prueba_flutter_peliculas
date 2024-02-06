@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
+// import 'package:flutter/painting.dart';
 import 'package:movies/api/endpoints.dart';
 import 'package:movies/constants/api_constants.dart';
 import 'package:movies/modal_class/credits.dart';
@@ -122,7 +122,7 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
                                         Text(
                                           widget.movie.title!,
                                           style: widget
-                                              .themeData.textTheme.headline5,
+                                              .themeData.textTheme.headlineSmall,
                                           maxLines: 2,
                                           overflow: TextOverflow.ellipsis,
                                         ),
@@ -133,7 +133,7 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
                                               Text(
                                                 widget.movie.voteAverage!,
                                                 style: widget.themeData
-                                                    .textTheme.bodyText1,
+                                                    .textTheme.bodyLarge,
                                               ),
                                               Icon(
                                                 Icons.star,
@@ -167,7 +167,7 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
                                               child: Text(
                                                 'Overview',
                                                 style: widget.themeData
-                                                    .textTheme.bodyText1,
+                                                    .textTheme.bodyLarge,
                                               ),
                                             ),
                                           ],
@@ -177,7 +177,7 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
                                           child: Text(
                                             widget.movie.overview!,
                                             style: widget
-                                                .themeData.textTheme.caption,
+                                                .themeData.textTheme.bodySmall,
                                           ),
                                         ),
                                         Row(
@@ -188,7 +188,7 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
                                               child: Text(
                                                 'Release date : ${widget.movie.releaseDate}',
                                                 style: widget.themeData
-                                                    .textTheme.bodyText1,
+                                                    .textTheme.bodyLarge,
                                               ),
                                             ),
                                           ],
@@ -278,15 +278,15 @@ class _MovieDetailPageState extends State<MovieDetailPage> {
                                 children: <Widget>[
                                   Text(
                                     '${cast.name}',
-                                    style: widget.themeData.textTheme.bodyText2,
+                                    style: widget.themeData.textTheme.bodyMedium,
                                   ),
                                   Text(
                                     'as',
-                                    style: widget.themeData.textTheme.bodyText2,
+                                    style: widget.themeData.textTheme.bodyMedium,
                                   ),
                                   Text(
                                     '${cast.character}',
-                                    style: widget.themeData.textTheme.bodyText2,
+                                    style: widget.themeData.textTheme.bodyMedium,
                                   ),
                                 ],
                               ),
