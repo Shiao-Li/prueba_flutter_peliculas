@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:movies/api/endpoints.dart';
 import 'package:movies/modal_class/function.dart';
 import 'package:movies/modal_class/genres.dart';
@@ -9,8 +10,23 @@ import 'package:movies/screens/settings.dart';
 import 'package:movies/screens/widgets.dart';
 import 'package:movies/theme/theme_state.dart';
 import 'package:provider/provider.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() => runApp(MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: FirebaseOptions(
+      apiKey: 'AIzaSyAXSEJypPoBeClp6KR7AkKZSyiHljsP5F4',
+      appId: '1:860116772302:web:d296ff7fb8a208555b779f',
+      messagingSenderId: '860116772302',
+      projectId: 'prueba2bim',
+      authDomain: 'prueba2bim.firebaseapp.com',
+      storageBucket: 'prueba2bim.appspot.com',
+    ),
+  );
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
@@ -21,7 +37,19 @@ class MyApp extends StatelessWidget {
         title: 'Matinee',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
-            primarySwatch: Colors.blue, canvasColor: Colors.transparent),
+          primarySwatch: Colors.blue,
+          canvasColor: Colors.transparent,
+        ),
+        localizationsDelegates: [
+          GlobalMaterialLocalizations.delegate,
+          GlobalWidgetsLocalizations.delegate,
+          // Agrega otros delegados de localización que puedas necesitar
+        ],
+        supportedLocales: [
+          const Locale('en', 'US'),
+          const Locale('es', 'ES'),
+          // Agrega otros idiomas que desees admitir
+        ],
         home: MyHomePage(),
       ),
     );
@@ -36,6 +64,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   final GlobalKey<ScaffoldState> _scaffoldKey = new GlobalKey<ScaffoldState>();
   List<Genres> _genres = [];
+
   @override
   void initState() {
     super.initState();
@@ -72,21 +101,32 @@ class _MyHomePageState extends State<MyHomePage> {
             icon: Icon(Icons.search),
             onPressed: () async {
               final Movie? result = await showSearch<Movie?>(
-                  context: context,
-                  delegate:
-                  MovieSearch(themeData: state.themeData, genres: _genres));
+                context: context,
+                delegate:
+                    MovieSearch(themeData: state.themeData, genres: _genres),
+              );
               if (result != null) {
                 Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => MovieDetailPage(
-                            movie: result,
-                            themeData: state.themeData,
-                            genres: _genres,
-                            heroId: '${result.id}search')));
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => MovieDetailPage(
+                      movie: result,
+                      themeData: state.themeData,
+                      genres: _genres,
+                      heroId: '${result.id}search',
+                    ),
+                  ),
+                );
               }
             },
-          )
+          ),
+          IconButton(
+            color: state.themeData.colorScheme.secondary,
+            icon: Icon(Icons.language),
+            onPressed: () {
+              _showLanguageDialog(context);
+            },
+          ),
         ],
       ),
       drawer: Drawer(
@@ -129,5 +169,41 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
     );
+  }
+
+  Future<void> _showLanguageDialog(BuildContext context) async {
+    return showDialog<void>(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Select Language'),
+          content: SingleChildScrollView(
+            child: ListBody(
+              children: <Widget>[
+                _buildLanguageButton(context, 'en', 'English'),
+                _buildLanguageButton(context, 'es', 'Español'),
+                // Agrega más botones para otros idiomas
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _buildLanguageButton(
+      BuildContext context, String languageCode, String languageName) {
+    return ElevatedButton(
+      onPressed: () {
+        _setLanguage(languageCode);
+        Navigator.of(context).pop();
+      },
+      child: Text(languageName),
+    );
+  }
+
+  Future<void> _setLanguage(String languageCode) async {
+    SharedPreferences prefs = await SharedPreferences.getInstance();
+    await prefs.setString('language', languageCode);
   }
 }
