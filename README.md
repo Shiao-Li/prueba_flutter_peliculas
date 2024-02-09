@@ -1,39 +1,52 @@
-# Movies App made in Flutter with api data from TMDB
+# Prueba 2do DIM - Aplicación de películas hecha en Flutter con datos de API de TMDB
 
-This is an app that displays you details of movies that you can search for or browse.<br>
+Esta es una aplicación que muestra detalles de películas que puedes buscar o explorar, tambien podras iniciar sesion y elegir el idioma.<br>
 
-## Features :
+## Integrantes :
 
 <ul>
-<li>Fetch api data from TMDB asynchronously.</li>
-<li>Dynamic Theming using Provider</li>
-<li>Search Functionality</li>
-
+<li>Chasi Alexis</li>
+<li>Guanoluisa Elvis</li>
+<li>Shiao Roberto</li>
 </ul>
-Video Demo: https://youtu.be/5_bDIUYLWzg <br><br>
-<a href ="https://play.google.com/store/apps/details?id=com.bimsina.movies"><img src ="https://play.google.com/intl/en/badges/images/generic/en_badge_web_generic.png"></a>
-Screenshots:<br>
-<table style={border:"none"}><tr>
-<td><img src="https://user-images.githubusercontent.com/29589003/58170605-93aba280-7cb3-11e9-8733-dff46d1e86c7.png" alt="Screenshot 2"/></td>
-<td><img src="https://user-images.githubusercontent.com/29589003/58170608-93aba280-7cb3-11e9-933f-395501d7a5a0.png" alt="Screenshot 1"/></td>
-<td><img src="https://user-images.githubusercontent.com/29589003/58170610-94443900-7cb3-11e9-946f-79587eaa1043.png" alt="Screenshot 3"/></td>
 
-</tr>
-<tr>
-<td><img src="https://user-images.githubusercontent.com/29589003/58170611-94443900-7cb3-11e9-8f01-ce5fe83bb93e.png" alt="Screenshot 1"/></td>
-
-<td><img src="https://user-images.githubusercontent.com/29589003/58170612-94dccf80-7cb3-11e9-8955-ce6bba8b36dd.png" alt="Screenshot 2"/></td>
-<td><img src="https://user-images.githubusercontent.com/29589003/58170613-94dccf80-7cb3-11e9-9182-a08922ae7139.png" alt="Screenshot 3"/></td>
-
-</tr>
+## Descargalo :
+| key            | Value    |
+| :------------- | :------- |
+| `Aplicación movil` | No disponible |
+| `Aplicación de escritorio` | [Matinee.exe](https://epnecuador-my.sharepoint.com/:u:/g/personal/roberto_shiao_epn_edu_ec/EaeVYa20Y5hEs4BbZX_tgjwB1vXO1rEPPFg4qcGwEa5OhA?e=Nc9sFv) |
 
 </table>
+Screenshots aplicación movil:<br>
+<table style={border:"none"}><tr>
+  ![image]()
 
-## To run this app
+<td><img src="https://github.com/Shiao-Li/prueba_flutter_peliculas/assets/95731527/7a055ceb-9b99-4453-a636-332617898496" alt="Screenshot 2"/></td>
+<td><img src="https://github.com/Shiao-Li/prueba_flutter_peliculas/assets/95731527/c590b430-034a-48d0-b70f-44ff6bc33db0" alt="Screenshot 1"/></td>
+<td><img src="https://github.com/Shiao-Li/prueba_flutter_peliculas/assets/95731527/812a9ebd-b141-4d68-8189-07ef565684e4" alt="Screenshot 3"/></td>
+<td><img src="https://github.com/Shiao-Li/prueba_flutter_peliculas/assets/95731527/02e5c6b2-0e3d-41bd-a939-d5941ff11235" alt="Screenshot 3"/></td>
+</tr>
+<tr>
+<td><img src="https://github.com/Shiao-Li/prueba_flutter_peliculas/assets/95731527/9f713e84-71eb-4202-9f84-894cdcc90d8f" alt="Screenshot 1"/></td>
+<td><img src="https://github.com/Shiao-Li/prueba_flutter_peliculas/assets/95731527/d8085938-1156-4a03-bc2c-279c08d04fd5" alt="Screenshot 2"/></td>
+<td><img src="https://github.com/Shiao-Li/prueba_flutter_peliculas/assets/95731527/69dae51d-bc39-4b89-8f7d-23fe215290b6" alt="Screenshot 2"/></td>
+<td><img src="https://github.com/Shiao-Li/prueba_flutter_peliculas/assets/95731527/3028e935-cc94-4aa8-b45c-1f9ca67dc4ba" alt="Screenshot 2"/></td>
+</tr>
+</table>
 
-<ol>
-<li>Obtain api key from <a href ="https://www.themoviedb.org/">TMDB</a>.</li>
-<li>Replace YOUR_API_KEY in api_constants.dart with your api key.</li>
-<li>Run the app with <b>flutter run --release</b></li>
+</table>
+Screenshots aplicación de escritorio:<br>
+<table style={border:"none"}><tr>
+<td><img src="https://github.com/Shiao-Li/prueba_flutter_peliculas/assets/95731527/977c3e16-d5ca-4f9b-974e-0758ebad6890" alt="Screenshot 2"/></td>
+<td><img src="https://github.com/Shiao-Li/prueba_flutter_peliculas/assets/95731527/86947740-dd7a-424c-b7b5-0e63466179f7" alt="Screenshot 1"/></td>
+<td><img src="https://github.com/Shiao-Li/prueba_flutter_peliculas/assets/95731527/7e27e4ea-1355-404f-8b18-d224e70e0e8a" alt="Screenshot 3"/></td>
+<td><img src="https://github.com/Shiao-Li/prueba_flutter_peliculas/assets/95731527/dd5aa54c-5e1c-4855-8d44-595324975a3e" alt="Screenshot 1"/></td>
+</tr>
+<tr>
+<td><img src="https://github.com/Shiao-Li/prueba_flutter_peliculas/assets/95731527/745d192c-cf57-4edc-8849-80b14f7b7129" alt="Screenshot 1"/></td>
+<td><img src="https://github.com/Shiao-Li/prueba_flutter_peliculas/assets/95731527/025ef745-9a7c-4c55-bd4e-6488eeb84743" alt="Screenshot 2"/></td>
+<td><img src="https://github.com/Shiao-Li/prueba_flutter_peliculas/assets/95731527/420a9770-8c6a-4fac-b0e5-7df2a3fbcc4c" alt="Screenshot 3"/></td>
+<td><img src="https://github.com/Shiao-Li/prueba_flutter_peliculas/assets/95731527/90faa6d1-1da0-4074-8f3e-20d518619169" alt="Screenshot 3"/></td>
+</tr>
+</table>
 
-</ol>
